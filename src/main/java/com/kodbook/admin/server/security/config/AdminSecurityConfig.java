@@ -15,12 +15,12 @@ import java.time.Duration;
 @Configuration
 public class AdminSecurityConfig {
 
-    @Value("${remember.me.key}")
-    private final String rememberMeKey;
     private final AdminServerProperties adminServerProperties;
+    
+    @Value("${remember.me.key}")
+    private String rememberMeKey;
 
-    public AdminSecurityConfig(String rememberMeKey, AdminServerProperties adminServerProperties) {
-        this.rememberMeKey = rememberMeKey;
+    public AdminSecurityConfig(AdminServerProperties adminServerProperties) {
         this.adminServerProperties = adminServerProperties;
     }
 
