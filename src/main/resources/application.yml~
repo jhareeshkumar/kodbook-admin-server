@@ -1,0 +1,12 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: admin-server
+  profiles:
+    active: dev
+  boot:
+    admin:
+      context-path: /admin
+      ui:
+        enable-toasts

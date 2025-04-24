@@ -1,0 +1,16 @@
+spring:
+  security:
+    user:
+      name: ${ADMIN_USERNAME}
+      password: ${ADMIN_PASSWORD}
+      roles: ADMIN
+remember:
+  me:
+    key: ${REMEMBER_ME_KEY}
+server:
+  servlet:
+    session:
+      timeout: 30m
+#logging:
+#  level:
+#    org.springframework.security: DEBUG
