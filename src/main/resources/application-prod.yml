@@ -1,0 +1,9 @@
+spring:
+  security:
+    user:
+      name: ${ADMIN_USERNAME}
+      password: ${ADMIN_PASSWORD}
+      roles: ADMIN
+remember:
+  me:
+    key: ${REMEMBER_ME_KEY}
