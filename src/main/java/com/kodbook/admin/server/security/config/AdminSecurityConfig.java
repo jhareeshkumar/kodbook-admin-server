@@ -14,7 +14,7 @@ import java.time.Duration;
 
 @Configuration
 public class AdminSecurityConfig {
-    
+
     private final AdminServerProperties adminServerProperties;
 
     @Value("${remember.me.key}")
@@ -43,7 +43,7 @@ public class AdminSecurityConfig {
                 )
                 .httpBasic(Customizer.withDefaults())
                 .csrf(csrf -> csrf
-                        .ignoringRequestMatchers(new AntPathRequestMatcher(adminServerProperties.path("/instances"), "POST"))
+                        .ignoringRequestMatchers(new AntPathRequestMatcher(adminServerProperties.path("/instances/**"), "POST"))
                         .ignoringRequestMatchers(new AntPathRequestMatcher(adminServerProperties.path("/instances/*"), "DELETE"))
                         .ignoringRequestMatchers(new AntPathRequestMatcher(adminServerProperties.path("/logout"), "POST"))
                 )
